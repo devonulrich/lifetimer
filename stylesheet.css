@@ -31,7 +31,7 @@ body {
 
 .topMiniBox {
     width: 90px;
-    height: 88px;
+    height: 87px;/*to make the text line up with the background image's lines*/
     text-align: left;
     font-size: 1.3em;
 }
