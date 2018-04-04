@@ -99,4 +99,19 @@ body {
     height: 1856448px;
     border-left: solid 1px #fff;
     border-right: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+}
+
+#footer {
+    width: 1000px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+a, a:visited, a:hover, a:active {/*for github link on bottom*/
+    color: #fff;
 }
