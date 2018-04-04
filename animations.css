@@ -1,0 +1,9 @@
+@keyframes textAppear {
+    from {color: black;}
+    to {color: white;}
+}
+
+@keyframes contentAppear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
