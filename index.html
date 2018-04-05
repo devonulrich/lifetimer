@@ -10,11 +10,24 @@
     <body>
         <div id="header">
             <h1>Lifetimer</h1>
-            <p>The rectangle below represents your entire life. The white section is all the
-               time that has already passed, and the black section further down is all the
-               time you still have in your life.</p>
-            <p>Each pixel is one second, and a row of pixels is 15 minutes. The ruler on the
-               left measures the rectangle in hours, days, and years.</p>
+            <div id="birthInput">
+                <p>Enter your date of birth:</p>
+                <div id="fields">
+                    <input id="month" type="text" placeholder="MM"></input>
+                    <span class="dateSeparate">-</span>
+                    <input id="day" type="text" placeholder="DD"></input>
+                    <span class="dateSeparate">-</span>
+                    <input id="year" type="text" placeholder="YYYY"></input>
+                </div>
+                <div id="goButton">GO</div>
+            </div>
+            <div id="description">
+                <p>The rectangle below represents your entire life. The white section is all
+                   the time that has already passed, and the black section further down is
+                   all the time you still have in your life.</p>
+                <p>Each pixel is one second, and a row of pixels is 15 minutes. The ruler on
+                   the left measures the rectangle in hours, days, and years.</p>
+            </div>
         </div>
         <div id="container">
             <div id="sideSection">
