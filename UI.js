@@ -42,9 +42,14 @@ var UI = (function() {
             console.log("valid");
         } else {
             //invalid - make an error message appear
-            console.log("invalid");
+            showInvalidText();
         }
     }    
+
+    function showInvalidText() {
+        var errorElem = document.getElementById("error");
+        errorElem.classList.add("showText");
+    }
 
     return {
         start: function() {

@@ -7,3 +7,16 @@
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+@keyframes textFadeInOut {
+    0% {color: black;}
+    14% {color: white;}
+    85% {color: white;}
+    100% {color: black;}
+}
+
+.showText {
+    animation-name: textAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}

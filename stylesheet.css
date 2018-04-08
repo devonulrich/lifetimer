@@ -48,7 +48,7 @@ body {
     padding: 0px;
 }
 
-#birthInput p {
+.birthText {
     width: 1000px;
     margin: 0px;
     padding: 0px;
@@ -90,12 +90,20 @@ body {
     color: white;
 }
 
+#error {
+    width: 1000px;
+    margin: 20px 0px;
+    padding: 0px;
+    font-size: 1.2em;
+    text-align: center;
+    color: black;
+}
+
 #goButton {
     display: block;
     width: 80px;
     height: 20px;
     margin: auto;
-    margin-top: 40px;
     padding: 3px;
     border: 1px solid white;
     background: black;
