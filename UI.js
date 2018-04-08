@@ -1,33 +1,59 @@
 var UI = (function() {
 
-    return {
-        populateSideDiv: function() {
-            var canvas = document.getElementById("current");
-            var ctx = canvas.getContext("2d");
-            ctx.fillStyle = "#FFF";
-            ctx.fillRect(0, 0, 900, 672);
+    function populateSideDiv() {
+        var canvas = document.getElementById("current");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FFF";
+        ctx.fillRect(0, 0, 900, 672);
 
-            var side = document.getElementById("sideSection");
-            for(var i = 0; i < 70; i++) {
-                var box = document.createElement("div");
-                box.className = "sideBox";
-                //box.appendChild(document.createTextNode("Year " + i));
+        var side = document.getElementById("sideSection");
+        for(var i = 0; i < 70; i++) {
+            var box = document.createElement("div");
+            box.className = "sideBox";
+            //box.appendChild(document.createTextNode("Year " + i));
 
-                var topBox = document.createElement("div");
-                topBox.className = "topMiniBox";
-                topBox.appendChild(document.createTextNode("Year " + i));
-                box.appendChild(topBox);
+            var topBox = document.createElement("div");
+            topBox.className = "topMiniBox";
+            topBox.appendChild(document.createTextNode("Year " + i));
+            box.appendChild(topBox);
 
-                for(var j = 1; j < 365; j++) {
-                    var minibox = document.createElement("div");
-                    minibox.className = "miniBox";
-                    minibox.appendChild(document.createTextNode("Day " + (j + 1)));
-                    box.appendChild(minibox);
-                }
-                side.appendChild(box);
+            for(var j = 1; j < 365; j++) {
+                var minibox = document.createElement("div");
+                minibox.className = "miniBox";
+                minibox.appendChild(document.createTextNode("Day " + (j + 1)));
+                box.appendChild(minibox);
             }
+            side.appendChild(box);
+        }
+    }
+
+    function goBtnClick() {
+        var monthBox = document.getElementById("month");
+        var dayBox = document.getElementById("day");
+        var yearBox = document.getElementById("year");
+        
+        var monthVal = parseInt(monthBox.value);
+        var dayVal = parseInt(dayBox.value);
+        var yearVal = parseInt(yearBox.value);
+
+        //check if given birthdate is valid
+        if(Logic.validateBDay(monthVal, dayVal, yearVal)) {
+            //it is value - close the bday div
+            console.log("valid");
+        } else {
+            //invalid - make an error message appear
+            console.log("invalid");
+        }
+    }    
+
+    return {
+        start: function() {
+            populateSideDiv();
+
+            var goBtn = document.getElementById("goButton");
+            goBtn.onclick = goBtnClick;
         }
     };
 })();
 
-window.onload = UI.populateSideDiv;
+window.onload = UI.start;
