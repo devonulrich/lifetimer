@@ -44,6 +44,8 @@ var UI = (function() {
             //invalid - make an error message appear
             showInvalidText();
         }
+
+        return false;//prevents <a> from actually changing the URL
     }    
 
     function showInvalidText() {
