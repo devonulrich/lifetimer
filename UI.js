@@ -39,7 +39,7 @@ var UI = (function() {
         //check if given birthdate is valid
         if(Logic.validateBDay(monthVal, dayVal, yearVal)) {
             //it is value - close the bday div
-            console.log("valid");
+            showMainContent();
         } else {
             //invalid - make an error message appear
             showInvalidText();
@@ -47,6 +47,11 @@ var UI = (function() {
 
         return false;//prevents <a> from actually changing the URL
     }    
+
+    function showMainContent() {
+        var birthInput = document.getElementById("birthInput");
+        birthInput.classList.add("disappearBDiv");
+    }
 
     function showInvalidText() {
         var errorElem = document.getElementById("error");

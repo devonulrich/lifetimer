@@ -35,10 +35,7 @@ body {
     opacity: 0;
     text-align: center;/*to center #fields*/
 
-    animation-name: contentAppear;
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
+    overflow: hidden;
 }
 
 #fields {

@@ -8,15 +8,28 @@
     to {opacity: 1;}
 }
 
-@keyframes textFadeInOut {
-    0% {color: black;}
-    14% {color: white;}
-    85% {color: white;}
-    100% {color: black;}
+@keyframes disappearAndHide {
+    0% {opacity: 1; height: auto; margin-top: 20px;}
+    99% {opacity: 0; height: auto; margin-top: 20px;}
+    100% {opacity: 0; height: 0px; margin-top: 0px;}
 }
 
 .showText {
     animation-name: textAppear;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+}
+
+.appearBDiv {
+    animation-name: contentAppear;
+    animation-duration: 1s;
+    animation-delay: 2s;/*for birth input div*/
+    animation-fill-mode: forwards;
+}
+
+.disappearBDiv {
+    animation-name: disappearAndHide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
 }
