@@ -111,7 +111,8 @@ body {
 }
 
 #description {
-    display: none;
+    height: 0px;
+    overflow: hidden;
 }
 
 #description p {
@@ -121,12 +122,7 @@ body {
     padding: 0px;
     text-align: center;
     font-size: 1.2em;
-    color: black;
-
-    animation-name: textAppear;
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
+    color: white;
 }
 
 #container {

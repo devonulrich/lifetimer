@@ -51,6 +51,9 @@ var UI = (function() {
     function showMainContent() {
         var birthInput = document.getElementById("birthInput");
         birthInput.classList.add("disappearBDiv");
+
+        var description = document.getElementById("description");
+        description.classList.add("appearDescription");
     }
 
     function showInvalidText() {
