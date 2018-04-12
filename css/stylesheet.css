@@ -145,7 +145,7 @@ body {
     border-top: solid 1px white;
     color: white;
 
-    background-image: url("sidebg.png");
+    background-image: url("../sidebg.png");
     image-rendering: pixelated;
 }
 
