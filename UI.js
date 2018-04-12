@@ -54,6 +54,9 @@ var UI = (function() {
 
         var description = document.getElementById("description");
         description.classList.add("appearDescription");
+
+        var container = document.getElementById("container");
+        container.classList.add("appearMainContent");
     }
 
     function showInvalidText() {

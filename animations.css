@@ -46,3 +46,10 @@
     animation-fill-mode: forwards;
     animation-delay: 1s;
 }
+
+.appearMainContent {
+    animation-name: contentAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
