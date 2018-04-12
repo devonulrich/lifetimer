@@ -96,6 +96,15 @@ body {
     color: black;
 }
 
+#error, #sideSection div {
+    /*disable text selection*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
 #goButton {
     display: block;
     width: 80px;
