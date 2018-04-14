@@ -136,14 +136,14 @@ body {
 
 #container {
     width: 1000px;
-    height: 2452800px;
+    height: 2803200px;
     margin: auto;
     opacity: 0;
 }
 
 #sideSection {
     width: 100px;
-    height: 2452800px;
+    height: 2803200px;
     float: left;
 }
 
@@ -176,7 +176,7 @@ body {
 
 #mainSection {
     width: 900px;
-    height: 2452800px;
+    height: 2803200px;
     margin: auto;
     float: left;
 }
@@ -197,7 +197,7 @@ body {
 
 #future {
     width: 898px;
-    height: 1856448px;
+    height: 2206848px;
     margin: auto;
     border-left: solid 1px white;
     border-right: solid 1px white;

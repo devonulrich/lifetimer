@@ -7,7 +7,7 @@ var UI = (function() {
         ctx.fillRect(0, 0, 900, 672);
 
         var side = document.getElementById("sideSection");
-        for(var i = 0; i < 70; i++) {
+        for(var i = 0; i < 80; i++) {
             var box = document.createElement("div");
             box.className = "sideBox";
             //box.appendChild(document.createTextNode("Year " + i));
