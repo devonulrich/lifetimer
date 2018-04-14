@@ -38,7 +38,8 @@ var UI = (function() {
 
         //check if given birthdate is valid
         if(Logic.validateBDay(monthVal, dayVal, yearVal)) {
-            //it is value - close the bday div
+            //it is value - update the main divs and close the bday div
+            updateContentBoxes(monthVal, dayVal, yearVal);
             showMainContent();
         } else {
             //invalid - make an error message appear
@@ -58,6 +59,18 @@ var UI = (function() {
         var container = document.getElementById("container");
         container.classList.add("appearMainContent");
     }
+
+    function updateContentBoxes(month, day, year) {
+        var totalHeight = 2803200;
+
+        var secondsPast = Logic.getSecondsSinceBDay(month, day, year);
+        var pastHeight = Math.floor(secondsPast / 900);
+
+        document.getElementById("past").style.height = pastHeight + "px";
+        document.getElementById("future").style.height = (totalHeight - 672 - pastHeight -1)
+            + "px";
+    }
+
 
     function showInvalidText() {
         var errorElem = document.getElementById("error");

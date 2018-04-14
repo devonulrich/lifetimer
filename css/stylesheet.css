@@ -183,7 +183,6 @@ body {
 
 #past {
     width: 900px;
-    height: 595680px;/*temp*/
     margin: auto;
     background: white;
 }
@@ -197,7 +196,6 @@ body {
 
 #future {
     width: 898px;
-    height: 2206848px;
     margin: auto;
     border-left: solid 1px white;
     border-right: solid 1px white;

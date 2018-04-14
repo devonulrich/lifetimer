@@ -11,6 +11,15 @@ var Logic = (function() {
             if(timestamp > Date.now()) return false;//the given date is in the future
 
             return true;
+        },
+
+        getSecondsSinceBDay: function(month, day, year) {
+            //returns the number of seconds since the inputted birthdate
+
+            //must convert from ms to seconds
+            var timestampOld = Date.parse(month + "/" + day + "/" + year) / 1000;
+            var timestampNow = Date.now() / 1000;
+            return Math.floor(timestampNow - timestampOld);
         }
     };
 })();
