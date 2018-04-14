@@ -70,6 +70,14 @@ var UI = (function() {
 
             var goBtn = document.getElementById("goButton");
             goBtn.onclick = goBtnClick;
+
+            var lastBox = document.getElementById("year");
+            lastBox.addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if(event.keyCode === 13) {
+                    goBtnClick();
+                }
+            });
         }
     };
 })();
