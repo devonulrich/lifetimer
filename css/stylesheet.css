@@ -188,10 +188,17 @@ body {
 }
 
 #current {
-    display: block;
-    width: 900px;
-    height: 672px;
+    width: 898px;
+    height: 1px;
     margin: auto;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    background: black;
+}
+
+#currentProgress {
+    height: 1px;
+    background: white;
 }
 
 #future {

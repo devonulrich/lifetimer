@@ -1,11 +1,6 @@
 var UI = (function() {
 
     function populateSideDiv() {
-        var canvas = document.getElementById("current");
-        var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "#FFF";
-        ctx.fillRect(0, 0, 900, 672);
-
         var side = document.getElementById("sideSection");
         for(var i = 0; i < 80; i++) {
             var box = document.createElement("div");
@@ -39,7 +34,7 @@ var UI = (function() {
         //check if given birthdate is valid
         if(Logic.validateBDay(monthVal, dayVal, yearVal)) {
             //it is value - update the main divs and close the bday div
-            updateContentBoxes(monthVal, dayVal, yearVal);
+            initContentBoxes(monthVal, dayVal, yearVal);
             showMainContent();
         } else {
             //invalid - make an error message appear
@@ -60,13 +55,15 @@ var UI = (function() {
         container.classList.add("appearMainContent");
     }
 
-    function updateContentBoxes(month, day, year) {
+    function initContentBoxes(month, day, year) {
         var totalHeight = 2803200;
 
         var secondsPast = Logic.getSecondsSinceBDay(month, day, year);
         var pastHeight = Math.floor(secondsPast / 900);
 
         document.getElementById("past").style.height = pastHeight + "px";
+        document.getElementById("currentProgress").style.width = ((secondsPast % 900) - 1)
+            + "px";
         document.getElementById("future").style.height = (totalHeight - 672 - pastHeight -1)
             + "px";
     }
