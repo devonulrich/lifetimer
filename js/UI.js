@@ -1,5 +1,7 @@
 var UI = (function() {
 
+    var month, day, year;//holds VALID birthdate
+
     function populateSideDiv() {
         var side = document.getElementById("sideSection");
         for(var i = 0; i < 80; i++) {
@@ -34,7 +36,10 @@ var UI = (function() {
         //check if given birthdate is valid
         if(Logic.validateBDay(monthVal, dayVal, yearVal)) {
             //it is value - update the main divs and close the bday div
-            initContentBoxes(monthVal, dayVal, yearVal);
+            month = monthVal;
+            day = dayVal;
+            year = yearVal;
+            updateContentBoxes();
             showMainContent();
         } else {
             //invalid - make an error message appear
@@ -55,7 +60,7 @@ var UI = (function() {
         container.classList.add("appearMainContent");
     }
 
-    function initContentBoxes(month, day, year) {
+    function updateContentBoxes() {
         var totalHeight = 2803200;
 
         var secondsPast = Logic.getSecondsSinceBDay(month, day, year);
@@ -66,8 +71,9 @@ var UI = (function() {
             + "px";
         document.getElementById("future").style.height = (totalHeight - 672 - pastHeight -1)
             + "px";
-    }
 
+        setTimeout(updateContentBoxes, 1000);//repeat, constantly updating the divs
+    }
 
     function showInvalidText() {
         var errorElem = document.getElementById("error");
