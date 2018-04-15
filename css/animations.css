@@ -26,6 +26,13 @@
     animation-fill-mode: forwards;
 }
 
+.showTextDelayed {
+    animation-name: textAppear;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
 .appearBDiv {
     animation-name: contentAppear;
     animation-duration: 1s;
