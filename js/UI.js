@@ -67,7 +67,7 @@ var UI = (function() {
         var pastHeight = Math.floor(secondsPast / 900);
 
         document.getElementById("past").style.height = pastHeight + "px";
-        document.getElementById("currentProgress").style.width = ((secondsPast % 900) - 1)
+        document.getElementById("currentProgress").style.width = Math.max((secondsPast % 900) - 1, 0);
             + "px";
         document.getElementById("future").style.height = (totalHeight - 672 - pastHeight -1)
             + "px";
